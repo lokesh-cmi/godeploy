@@ -1,0 +1,25 @@
+application {
+    config {
+        baseName deploygo
+        applicationType microservice
+        packageName com.go
+        authenticationType oauth2
+        serverPort 9454
+        databaseType no
+        prodDatabaseType no
+        logManagementType no
+        serviceDiscoveryType no
+        blueprint [gomicro]
+    }
+}
+ deployment {
+    deploymentType kubernetes
+    appsFolders [deploygo]
+    dockerRepositoryName "lokeshkarakala"
+    kubernetesNamespace go
+    serviceDiscoveryType no
+    kubernetesServiceType LoadBalancer
+    istio false
+    kubernetesUseDynamicStorage true
+    monitoring no
+}

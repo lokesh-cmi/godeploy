@@ -1,0 +1,11 @@
+{
+    "projectId": "deployGO-wjyu9tM5q",
+    "projectName": "deployGO",
+    "cloudProvider": "minikube",
+    "orchestration": "kubernetes",
+    "kubernetesNamespace": "go",
+    "ingress": "istio",
+    "dockerRepositoryName": "lokeshkarakala",
+    "monitoring": "false",
+    "enableECK": "false"
+}

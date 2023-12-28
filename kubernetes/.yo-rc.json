@@ -1,0 +1,22 @@
+{
+  "generator-jhipster": {
+    "appsFolders": ["deploygo"],
+    "clusteredDbApps": [],
+    "deploymentType": "kubernetes",
+    "directoryPath": "../",
+    "dockerPushCommand": "docker push",
+    "dockerRepositoryName": "lokeshkarakala",
+    "ingressDomain": "",
+    "istio": false,
+    "jhipsterVersion": "7.10.0",
+    "jwtSecretKey": "NWU4MDI5YjFjNjNkNzUwYzc3ODBjYWViM2IxNTM0YTQ5NzI5OWY3M2Y4OWI3YTI3NDFkYTYyYzM5MTFiZTc4ZWZhYmM4NWI4N2E4NTE0NzVhMmFjZmQzMmY1N2RlY2MwZDI5Yw==",
+    "kubernetesNamespace": "go",
+    "kubernetesServiceType": "LoadBalancer",
+    "kubernetesStorageClassName": "",
+    "kubernetesStorageProvisioner": "",
+    "kubernetesUseDynamicStorage": true,
+    "monitoring": "no",
+    "serviceDiscoveryType": "no",
+    "skipJhipsterDependencies": true
+  }
+}

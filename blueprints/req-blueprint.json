@@ -1,0 +1,25 @@
+{
+    "projectName": "deployGO",
+    "deployment": {
+        "cloudProvider": "minikube",
+        "dockerRepositoryName": "lokeshkarakala",
+        "enableECK": "false",
+        "kubernetesUseDynamicStorage": "true",
+        "kubernetesNamespace": "go",
+        "ingressType": "istio",
+        "monitoring": "false",
+        "projectName": "deployGO"
+    },
+    "services": {
+        "0": {
+            "label": "deploygo",
+            "applicationName": "deploygo",
+            "applicationFramework": "gomicro",
+            "packageName": "com.go",
+            "serverPort": "9454",
+            "applicationType": "microservice",
+            "authenticationType": "oauth2"
+        }
+    },
+    "projectId": "deployGO-wjyu9tM5q"
+}
