@@ -49,18 +49,18 @@ spec:
           env:
             - name: SPRING_PROFILES_ACTIVE
               value: prod
-            - name: MINIKUBE_IP
-              valueFrom:
-                configMapKeyRef:
-                  name: minikube-cm
-                  key: minikube-ip
+            # - name: MINIKUBE_IP
+            #   valueFrom:
+            #     configMapKeyRef:
+            #       name: minikube-cm
+            #       key: minikube-ip
             - name: MANAGEMENT_TRACING_BAGGAGE_REMOTE_FIELDS
               value: "x-request-id,x-ot-span-context"
             # Custom trustStore required when using Let's Encrypt staging
             - name: JAVA_OPTS
               value: " -Xmx256m -Xms256m"
             - name: SPRING_SECURITY_OAUTH2_CLIENT_PROVIDER_OIDC_ISSUER_URI
-              value: http://$(MINIKUBE_IP):30001/realms/jhipster
+              value: http://192.168.49.2:30001/realms/jhipster
             - name: SPRING_SECURITY_OAUTH2_CLIENT_REGISTRATION_OIDC_CLIENT_ID
               value: internal
             - name: SPRING_SECURITY_OAUTH2_CLIENT_REGISTRATION_OIDC_CLIENT_SECRET
@@ -73,14 +73,14 @@ spec:
             #    mountPath: /etc/pki/java
             ## GO ##
             - name: KEYCLOAK_URL
-              value: http://$(MINIKUBE_IP):30001/realms/jhipster
+              value: http://192.168.49.2:30001/realms/jhipster
             - name: SERVICE_REGISTRY_URL
               value: http://admin:$(JHIPSTER_REGISTRY_PASSWORD)@jhipster-registry.go.svc.cluster.local:8761/eureka/apps/
               ## GO MICRO ##
             - name: GO_MICRO_ACTIVE_PROFILE
               value: prod
             - name: GO_MICRO_KEYCLOAK_URL
-              value: http://$(MINIKUBE_IP):30001
+              value: http://192.168.49.2:30001
             - name: GO_MICRO_SERVICE_REGISTRY_URL
               value: http://admin:$(JHIPSTER_REGISTRY_PASSWORD)@jhipster-registry.go.svc.cluster.local:8761/eureka/apps/
           resources:
